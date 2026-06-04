@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.cdnfonts.com/css/gilroy-free');
+@import url('https://fonts.cdnfonts.com/css/aptos');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Aptos', 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sidebar: 'Gilroy', 'Inter', sans-serif;
+
+    /* Hancock Iron Ore brand palette */
+    --background: 210 20% 98%;
+    --foreground: 210 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 30% 12%;
+    /* Primary: Pantone 641C #006A9D */
+    --primary: 203 92% 46%;
+    --primary-foreground: 0 0% 100%;
+    /* Secondary: light tint of primary blue */
+    --secondary: 203 40% 93%;
+    --secondary-foreground: 203 60% 20%;
+    --muted: 210 20% 93%;
+    --muted-foreground: 210 15% 46%;
+    /* Accent: Pantone 2201C #00AFD0 */
+    --accent: 192 100% 41%;
+    --accent-foreground: 0 0% 100%;
+    /* Destructive: Pantone 2348C #F15B55 */
+    --destructive: 2 85% 63%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 203 100% 31%;
+    /* Charts using brand palette */
+    --chart-1: 203 100% 31%;   /* #006A9D */
+    --chart-2: 192 100% 41%;   /* #00AFD0 */
+    --chart-3: 162 100% 28%;   /* #00917B */
+    --chart-4: 27 90% 64%;     /* #F68C50 */
+    --chart-5: 2 85% 63%;      /* #F15B55 */
+    --radius: 0.625rem;
+
+    /* Sidebar: dark navy based on primary */
+    --sidebar-background: 203 0% 62%;
+    --sidebar-foreground: 203 30% 88%;
+    --sidebar-primary: 192 100% 41%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 203 80% 18%;
+    --sidebar-accent-foreground: 203 20% 95%;
+    --sidebar-border: 203 60% 20%;
+    --sidebar-ring: 192 100% 41%;
+  }
+
+  .dark {
+    --background: 203 40% 8%;
+    --foreground: 210 20% 95%;
+    --card: 203 35% 12%;
+    --card-foreground: 210 20% 95%;
+    --popover: 203 35% 12%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 192 100% 41%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 203 30% 16%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 203 25% 15%;
+    --muted-foreground: 210 15% 55%;
+    --accent: 203 100% 31%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 2 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 203 25% 18%;
+    --input: 203 25% 18%;
+    --ring: 192 100% 41%;
+    --chart-1: 203 100% 45%;
+    --chart-2: 192 100% 50%;
+    --chart-3: 162 100% 38%;
+    --chart-4: 27 90% 68%;
+    --chart-5: 2 85% 65%;
+
+    --sidebar-background: 203 60% 7%;
+    --sidebar-foreground: 203 20% 80%;
+    --sidebar-primary: 192 100% 41%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 203 50% 12%;
+    --sidebar-accent-foreground: 203 15% 90%;
+    --sidebar-border: 203 40% 14%;
+    --sidebar-ring: 192 100% 41%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
